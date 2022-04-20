@@ -1,9 +1,14 @@
+using ABC;
+public class Program
+{
+    public static void Main()
+    {
+        BasicCalculator calculator1 = new(34.6, 35.6);
+        var y = BasicCalculator.brand;
 
-Console.Write("Hey there!!");
-
-Methods m1 = new();
-var s = m1.Sum();
-s = m1.Sum(23.4, 56.7);
-s = m1.Sum(34.2);
-s = m1.Sum(2.3, 4.6, 12.4);
-
+        var s2 = calculator1.Sum();
+        var d2 = calculator1.Subtract();
+        var m2 = calculator1.Multiply();
+        var di2 = calculator1.Divide();
+    }
+}

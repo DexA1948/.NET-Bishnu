@@ -25,6 +25,15 @@ class Methods
     // 5. Varaible number of arguments
     public double Sum(params double[] numbers) => numbers.Sum();
 
-       
+    // 6. Optional arguments
+    public string Greet(string firstName, string lastName, string salutation = "Mr.") => 
+        $"Hello, {salutation} {firstName} {lastName}";
 
+    // 7. Returning multiple values using tuples
+    public (double, double) CalcSumAndAverage()
+    {
+        double av = 45.6;
+        double sum = 34535.6;
+        return (av, sum);
+    }
 }
