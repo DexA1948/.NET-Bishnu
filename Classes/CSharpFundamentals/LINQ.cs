@@ -47,6 +47,7 @@ public class Query
         // List all persons who lives in kathmandu
         var ktmNiwasi = people.Where(x => x.Address == "ktm");
 
-
+        // List all males whose name starts with letter 'h/H'
+        
     }
 }
