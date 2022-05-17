@@ -20,10 +20,10 @@ public class Person
     public DateTime Dob { get; set; }
 
     // Readonly property
-    public string Address { get; }
+    public string Address { get; set; }
 
     // Default value
-    public char Gen { get; private set; } = 'F';
+    public char Gen { get; set; } = 'F';
     public Gender Sex { get; private set; } = Gender.Female;
 }
 
