@@ -48,6 +48,6 @@ public class Query
         var ktmNiwasi = people.Where(x => x.Address == "ktm");
 
         // List all males whose name starts with letter 'h/H'
-        
+        var males = people.Where(x => x.Name.ToLower().StartsWith("h") && x.Gen == 'm');
     }
 }
