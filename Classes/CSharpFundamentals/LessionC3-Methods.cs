@@ -1,3 +1,5 @@
+using System.Linq;
+
 class Methods
 {
     // 1. No return value, no parameter
