@@ -4,7 +4,9 @@ public class FileIO
 {
     public void ReadFileFromDisk(string path)
     {
-        string fileText = File.ReadAllText(path);        
+        string fileText = File.ReadAllText(path); 
+
+        FileInfo fi = new FileInfo(path);
         Console.WriteLine(fileText);
     }
 
