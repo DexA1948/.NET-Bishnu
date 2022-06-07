@@ -16,4 +16,18 @@ public class CollegeController: Controller
     {
         return View(colleges);
     }
+    
+    public IActionResult Add()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Add(College college)
+    {
+        // Save college
+        colleges.Add(college);
+
+        return RedirectToAction(nameof(Index)) ;
+    }
 }
