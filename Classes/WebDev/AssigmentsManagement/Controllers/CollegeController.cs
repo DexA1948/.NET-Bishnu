@@ -31,4 +31,20 @@ public class CollegeController: Controller
 
         return RedirectToAction(nameof(Index)) ;
     }
+
+    public IActionResult Edit(int id)
+    {
+        var collgeToEdit = _db.Colleges.Find(id);
+        return View(collgeToEdit);
+    }
+
+    [HttpPost]
+    public IActionResult Edit(College college)
+    {
+        // Save college
+        _db.Colleges.Update(college);
+        _db.SaveChanges();
+
+        return RedirectToAction(nameof(Index));
+    }
 }

@@ -2,29 +2,35 @@
 
 <h3>All Colleges</h3>
 <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Description</th>
-      <th scope="col">Address</th>
-      <th scope="col">Established</th>
-      <th scope="col">Rank</th>
-    </tr>
-  </thead>
-  <tbody>
-      @{ int i = 1; }
-      @foreach(var college in Model)
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Address</th>
+            <th scope="col">Established</th>
+            <th scope="col">Rank</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 1;
+        }
+        @foreach (var college in Model)
         {
             <tr>
-              <th scope="row">@i</th>
-              <td>@college.Name</td>
-              <td>@college.Description</td>
-              <td>@college.Address</td>
-              <td>@college.EstablishedDate</td>
-              <td>@college.Rank</td>
-          </tr>
-          @(i++)
+                <th scope="row">@(i++)</th>
+                <td>@college.Name</td>
+                <td>@college.Description</td>
+                <td>@college.Address</td>
+                <td>@college.EstablishedDate</td>
+                <td>@college.Rank</td>
+                <th>
+                    <a class="btn btn-warning btn-sm" href="/college/edit/@college.Id">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="/college/delete/@college.Id">Delete</a>
+                </th>
+            </tr>
         }
-  </tbody>
+    </tbody>
 </table>
